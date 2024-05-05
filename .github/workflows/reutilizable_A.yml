@@ -1,0 +1,20 @@
+name: Workflow reuitilizable
+
+on:
+  workflow_call:
+    inputs:
+      name_runners:
+        description: "Nombre del self-hosted"
+        required: true
+        type: string
+        default: 0
+
+jobs:
+  Accion_workflow:
+    name: workflow
+    runs-on: ${{inputs.name_runners}}
+    steps:
+      - name: Accion del despliegue 1
+        run: | 
+          echo "Hola diablo"
+          
