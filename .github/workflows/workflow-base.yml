@@ -32,7 +32,7 @@ jobs:
 
   Workflow_reutilizable_despliegue_A:
     needs: Autorizacion_despliegue_A
-    uses: Herramientas-Actions/.github/workflows/reutilizable_A.yml@main
+    uses: sebras450/Herramientas-Actions/.github/workflows/reutilizable_A.yml@main
     with:
       name_runner: ubuntu-latest
     
