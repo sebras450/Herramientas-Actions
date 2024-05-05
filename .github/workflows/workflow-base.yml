@@ -1,0 +1,12 @@
+name: Flujo Base
+
+on: 
+  workflow_dispatch:
+
+jobs: 
+  Compilacion: 
+    runs-on: ubuntu
+    steps:
+      - name: Acción_1
+        run: | 
+          echo "Acciones por parte de la acción 1"
