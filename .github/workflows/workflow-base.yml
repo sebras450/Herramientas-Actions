@@ -10,3 +10,11 @@ jobs:
       - name: Acción_1
         run: | 
           echo "Acciones por parte de la acción 1"
+
+
+  Instlacion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Acción_2
+        run: | 
+          echo "Acciones por parte de la acción 2"
