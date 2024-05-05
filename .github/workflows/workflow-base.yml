@@ -5,7 +5,7 @@ on:
 
 jobs: 
   Compilacion: 
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Acción_1
         run: | 
