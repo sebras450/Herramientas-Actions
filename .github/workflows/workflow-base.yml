@@ -12,10 +12,30 @@ jobs:
           echo "Acciones por parte de la acción 1"
 
 
-  Instlacion:
+  Instalacion:
     runs-on: ubuntu-latest
     needs: Compilacion
+    environment: Aprobacion_instalacion
     steps:
       - name: Acción_2
         run: | 
           echo "Acciones por parte de la acción 2"
+
+  Autorizacion_despliegue_A:
+    runs-on: ubuntu-latest
+    environment: Aprobacion_despliegue_A
+    needs: Instalacion
+    steps:
+      - name: Negocio_A
+        run: | 
+          echo "Aprobación de despliegue de Batch"
+
+  Workflow_reutilizable_despliegue_A:
+    needs: Autorizacion_despliegue_A
+    uses: Herramientas-Actions/.github/workflows/reutilizable_A.yml@main
+    with:
+      name_runner: ubuntu-latest
+    
+    
+    
+   
