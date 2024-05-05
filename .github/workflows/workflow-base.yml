@@ -34,7 +34,7 @@ jobs:
     needs: Autorizacion_despliegue_A
     uses: sebras450/Herramientas-Actions/.github/workflows/reutilizable_A.yml@main
     with:
-      name_runner: ubuntu-latest
+      name_runners: ubuntu-latest
     
     
     
