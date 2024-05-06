@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Negocio_A
         run: | 
-          echo "Aprobación de despliegue de Batch"
+          echo "Aprobación de acción despliegue A"
 
   Workflow_reutilizable_despliegue_A:
     needs: Autorizacion_despliegue_A
