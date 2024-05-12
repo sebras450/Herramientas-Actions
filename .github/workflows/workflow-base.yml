@@ -35,9 +35,3 @@ jobs:
     uses: sebras450/Herramientas-Actions/.github/workflows/reutilizable_A.yml@main
     with:
       name_runners: ubuntu-latest
-
-  job2:
-    runs-on: ubuntu-latest
-    needs:  Workflow_reutilizable_despliegue_A
-    steps:
-      - run: echo ${{ needs.job1.outputs.firstword }}
