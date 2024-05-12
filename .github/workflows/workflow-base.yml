@@ -36,8 +36,8 @@ jobs:
     with:
       name_runners: ubuntu-latest
 
-  Salida_workflow_reutilizable:
+  job2:
     runs-on: ubuntu-latest
-    needs: Workflow_reutilizable_despliegue_A
-    steps: 
-      - run: echo ${{ needs.Workflow_reutilizabledespliegue_A.outputs.firstworkd }}
+    needs:  Workflow_reutilizable_despliegue_A
+    steps:
+      - run: echo ${{ needs.job1.outputs.firstword }}
