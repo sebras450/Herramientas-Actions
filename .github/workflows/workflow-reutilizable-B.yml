@@ -1,4 +1,4 @@
-name: Reusable workflow B
+name: Workflow reuitilizable B
 
 on:
   workflow_call:
