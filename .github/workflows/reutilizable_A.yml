@@ -2,10 +2,10 @@ name: Workflow reuitilizable
 
 on:
   workflow_call:
-  
+
     outputs:
-      firstworkd:
-        description: "La primera salida"
+      firstword:
+        description: "The first output string"
         value: ${{ jobs.Accion_workflow.outputs.output1 }}
         
     inputs:
@@ -22,14 +22,13 @@ jobs:
     name: workflow salidas y entradas
     runs-on: ${{inputs.name_runners}}
     
-    outputs: 
-      output1: ${{ steps.step1.outputsfirstworkd }}
+    outputs:
+      output1: ${{ steps.step1.outputs.firstword }}
       
     steps:
-      - id: step1
-        run: echo "firstworkd=11.11.11" >> $GITHUB_OUTPUT
+     - id: step1
+       run: echo "firstword=hello" >> $GITHUB_OUTPUT
         
-      - name: Accion del despliegue 1
-        run: | 
-          echo "Hola diablo"
-          
+     - name: Accion del despliegue 1
+       run: | 
+         echo "Hola diablo"
