@@ -2,6 +2,12 @@ name: Workflow reuitilizable
 
 on:
   workflow_call:
+  
+    outputs:
+      firstworkd:
+        description: "La primera salida"
+        value: ${{ jobs.Accion_workflow.outputs.output1 }}
+        
     inputs:
       name_runners:
         description: "Nombre del self-hosted"
@@ -10,10 +16,19 @@ on:
         default: 0
 
 jobs:
+
   Accion_workflow:
-    name: workflow
+  
+    name: workflow salidas y entradas
     runs-on: ${{inputs.name_runners}}
+    
+    outputs: 
+      output1: ${{ steps.step1.outputsfirstworkd }}
+      
     steps:
+      - id: step1
+        run: echo "firstworkd=11.11.11" >> $GITHUB_OUTPUT
+        
       - name: Accion del despliegue 1
         run: | 
           echo "Hola diablo"
