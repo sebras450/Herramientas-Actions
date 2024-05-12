@@ -3,14 +3,14 @@ name: Flujo Base
 on: 
   workflow_dispatch:
 
-jobs: 
+jobs:
+
   Compilacion: 
     runs-on: ubuntu-latest
     steps:
       - name: Acción_1
         run: | 
           echo "Acciones por parte de la acción 1"
-
 
   Instalacion:
     runs-on: ubuntu-latest
@@ -35,7 +35,9 @@ jobs:
     uses: sebras450/Herramientas-Actions/.github/workflows/reutilizable_A.yml@main
     with:
       name_runners: ubuntu-latest
-    
-    
-    
-   
+
+  Salida_workflow_reutilizable:
+    runs-on: ubuntu-latest
+    needs: Workflow_reutilizable_despliegue_A
+    steps: 
+      - run: echo ${{ needs.Workflow_reutilizabledespliegue_A.outputs.firstworkd }}
