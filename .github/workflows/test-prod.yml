@@ -1,0 +1,22 @@
+name: test-upload-download
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-upload-download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create
+        run: |
+          mkdir -p directorio
+          ls -al
+          touch directorio/test.txt
+          echo "Lineas de pruebas" > directorio/test.txt
+          cat directorio/test.txt
+    
+      - name: Guardar-txt
+        uses: actions/upload-artifact@v2
+        with:
+            name: test
+            path: ${{ github.workspace }}/directorio/
