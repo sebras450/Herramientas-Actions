@@ -18,5 +18,4 @@ jobs:
 
     - name: Run script
       run: |
-        echo 'console.log("hola")' > script.js
         node script.js
