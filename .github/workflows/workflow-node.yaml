@@ -1,0 +1,22 @@
+name: Hola Mundo Workflow node
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Run script
+      run: |
+        echo 'console.log("hola")' > script.js
+        node script.js
