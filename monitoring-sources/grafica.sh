@@ -13,11 +13,6 @@ if [[ ! -f "$DATA_FILE" ]]; then
     exit 1
 fi
 
-# Función para leer y calcular el procentaje
-porcentaje() {
-    
-}
-
 # Función para leer y procesar datos
 process_file() {
     local file=$1      # Recibe el nombre del archivo como argumento
