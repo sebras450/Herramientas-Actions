@@ -3,6 +3,7 @@
 # Datos del servidor de inicio
 size_filesystem=500
 name_filesystem=/Minio
+max_length=$((size_filesystem/10))
 
 # Datos obtenidos en el transcurso del día
 DATA_FILE="$(dirname "$0")/datos.txt"  # Ruta relativa al script
