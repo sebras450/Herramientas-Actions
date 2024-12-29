@@ -3,7 +3,7 @@
 #Solicitud de info
 echo "Introduce el archivo o todos [.]"
 read action_commit
-echo "Introduce el texto del commit"
+echo "Introduce el número de la versión"
 read text_commit
 
 git add $action_commit
