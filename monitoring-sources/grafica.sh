@@ -98,4 +98,4 @@ printf '%0.s-' {1..102} && printf '\n'
 printf "| %s | %s |\n" "Almacenamiento necesario durante los X días" "$((promedio * total)) <unidad>"
 printf '%0.s-' {1..63} && printf '\n'
 
-# Implementar una estamiación a futura
+# Implementar una estimación a futura
