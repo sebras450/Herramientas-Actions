@@ -2,7 +2,7 @@
 
 # Nombre del archivo donde se va a guardar la información
 OUTPUT_FILE="dato_monitoreo.txt"
-
+# hola
 
 # Crear el encabeza del archivo "dato_monitoreo.txt" si no existe
 

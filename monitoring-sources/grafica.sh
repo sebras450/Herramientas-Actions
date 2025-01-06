@@ -37,7 +37,7 @@ declare -a values_porcentage
 process_file "$DATA_FILE" 2 values  # Leer la columna 2
 process_file "$DATA_FILE" 1 days    # Leer la columna 1
 process_file "$DATA_FILE" 3 dates   # Leer la columna 3
-
+## test prueba
 # # Imprimir el contenido de los arrays
 # echo "Valores procesados (columna 2): ${values[@]}"
 # echo "Días procesados (columna 1): ${days[@]}"
